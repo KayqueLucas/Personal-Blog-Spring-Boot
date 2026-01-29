@@ -1,6 +1,7 @@
-package com.blog.service;
+package com.blog.blog_pessoal.service;
 
-import com.blog.model.Article;
+import com.blog.blog_pessoal.model.Article;
+import org.springframework.stereotype.Service;
 import tools.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.nio.file.Paths;
 import java.util.Comparator;
 import java.util.List;
 
+@Service
 public class ArticleService {
     private final Path basePath = Paths.get("src/main/resources/articles");
     private final ObjectMapper mapper = new ObjectMapper();
